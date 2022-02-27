@@ -4,6 +4,7 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use App\Models\User;
 
 class Profile extends Model
 {
@@ -16,6 +17,7 @@ class Profile extends Model
         'biography',
         'birth_date',
         'gender',
+        'user_id',
     ];
 
 
@@ -28,4 +30,8 @@ class Profile extends Model
 
         'birth_date' => 'datetime',
     ];
+
+    public function user(){
+        return $this->belongsTo(User::class);
+    }
 }

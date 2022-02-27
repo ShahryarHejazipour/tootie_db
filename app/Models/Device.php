@@ -4,6 +4,8 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use App\Models\User;
+use App\Models\Tooti;
 
 class Device extends Model
 {
@@ -20,6 +22,7 @@ class Device extends Model
         'ip',
         'device_uu_id',
         'first_register_time',
+        'user_id',
     ];
 
     /**
@@ -32,4 +35,12 @@ class Device extends Model
         'last_time_visit' => 'datetime',
         'first_register_time' => 'datetime',
     ];
+
+    public function user(){
+        return $this->belongsTo(User::class);
+    }
+
+    public function tooti(){
+        return $this->belongsTo(Tooti::class);
+    }
 }

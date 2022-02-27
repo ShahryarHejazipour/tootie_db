@@ -15,6 +15,11 @@ class CreateMentionsTable extends Migration
     {
         Schema::create('mentions', function (Blueprint $table) {
             $table->id();
+            $table->integer('tooti_id');
+            $table->integer('profile_id');
+            $table->integer('comment_id');
+            $table->integer('mentioned_user_id');
+            $table->integer('mentioner_user_id');
             $table->timestamp('mention_time');
            // $table->timestamps();
         });

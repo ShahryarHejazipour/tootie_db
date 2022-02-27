@@ -17,13 +17,15 @@ class CreateUsersTable extends Migration
             $table->id();
             $table->string('username')->unique();
             $table->string('name_user');
+            $table->string('family_user');
             $table->string('email')->unique();
             $table->timestamp('register_first_time')->nullable();
-            $table->float('latitude_X');
-            $table->float('longitude_Y');
+            $table->string('latitude_X');
+            $table->string('longitude_Y');
             $table->string('password');
+            $table->integer('role_id');
 
-            $table->rememberToken();
+            //$table->rememberToken();
            // $table->timestamps();
         });
     }

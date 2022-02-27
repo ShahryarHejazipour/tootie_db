@@ -18,6 +18,10 @@ class CreateTootisTable extends Migration
             $table->text('tooti_text');
             $table->timestamp('tooti_time_creation');
             $table->text('quote_text');
+            $table->integer('device_id');
+            $table->integer('re_tooti_id');
+            $table->integer('image_url_id');
+            $table->integer('view_id');
            // $table->timestamps();
         });
     }

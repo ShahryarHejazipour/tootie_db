@@ -21,7 +21,8 @@ class CreateDevicesTable extends Migration
             $table->timestamp('last_time_visit');
             $table->string('os');
             $table->string('ip');
-            $table->integer('device_uu_id');
+            $table->string('device_uu_id');
+            $table->integer('user_id');
             $table->timestamp('first_register_time')->nullable();
            // $table->timestamps();
         });

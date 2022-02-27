@@ -4,16 +4,18 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use App\Models\Tooti;
 
 class Image extends Model
 {
     use HasFactory;
 
-    protected $table='images';
-    public $timestamps=false;
-    protected $fillable=[
+    protected $table = 'images';
+    public $timestamps = false;
+    protected $fillable = [
         'image_url',
         'image|_url_creation_time',
+        'user_id',
     ];
 
 
@@ -26,4 +28,11 @@ class Image extends Model
 
         'image|_url_creation_time' => 'datetime',
     ];
+
+    public function user()
+    {
+        return $this->belongsTo(User::class);
+    }
+
+
 }

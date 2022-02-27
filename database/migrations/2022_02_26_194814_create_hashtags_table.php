@@ -15,6 +15,10 @@ class CreateHashtagsTable extends Migration
     {
         Schema::create('hashtags', function (Blueprint $table) {
             $table->id();
+            $table->integer('tooti_id');
+            $table->integer('profile_id');
+            $table->integer('comment_id');
+            $table->integer('hash_main_id');
             $table->timestamp('hashtag_creation_time');
            // $table->timestamps();
         });

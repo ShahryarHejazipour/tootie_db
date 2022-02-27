@@ -15,6 +15,8 @@ class CreateTootiImagesTable extends Migration
     {
         Schema::create('tooti_images', function (Blueprint $table) {
             $table->id();
+            $table->integer('tooti_id');
+            $table->integer('image_id');
            // $table->timestamps();
         });
     }

@@ -4,6 +4,7 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use App\Models\Tooti;
 
 class TootiImage extends Model
 {
@@ -12,5 +13,12 @@ class TootiImage extends Model
     public $timestamps=false;
     protected $fillable=[
 
+        'tooti_id',
+        'image_id',
+
     ];
+
+    public function tooti(){
+        return $this->belongsTo(Tooti::class);
+    }
 }

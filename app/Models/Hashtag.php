@@ -4,15 +4,20 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use App\Models\Tooti;
 
 class Hashtag extends Model
 {
     use HasFactory;
 
-    protected $table='hashtags';
-    public $timestamps=false;
-    protected $fillable=[
+    protected $table = 'hashtags';
+    public $timestamps = false;
+    protected $fillable = [
         'hashtag_creation_time',
+        'tooti_id',
+        'profile_id',
+        'comment_id',
+        'hash_main_id',
     ];
 
 
@@ -25,4 +30,15 @@ class Hashtag extends Model
 
         'hashtag_creation_time' => 'datetime',
     ];
+
+    public function tooti()
+    {
+
+        return $this->belongsToMany(Tooti::class);
+    }
+
+    public function hashtagMain()
+    {
+        return $this->belongsTo(HashtagMain::class);
+    }
 }

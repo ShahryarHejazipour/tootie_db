@@ -4,6 +4,7 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use App\Models\User;
 
 class Follower extends Model
 {
@@ -12,6 +13,8 @@ class Follower extends Model
     public $timestamps=false;
     protected $fillable=[
         'follower_creation_time',
+        'user_id',
+        'follower_user_id',
     ];
 
 
@@ -24,4 +27,8 @@ class Follower extends Model
 
         'follower_creation_time' => 'datetime',
     ];
+
+    public function user(){
+        return $this->belongsTo(User::class);
+    }
 }

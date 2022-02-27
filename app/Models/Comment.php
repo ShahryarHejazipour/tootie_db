@@ -4,6 +4,8 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use App\Models\User;
+use App\Models\Tooti;
 
 class Comment extends Model
 {
@@ -13,6 +15,8 @@ class Comment extends Model
     protected $fillable=[
         'tooti_comment_time',
         'comment_text',
+        'user_id',
+        'tooti_id',
     ];
 
 
@@ -25,4 +29,12 @@ class Comment extends Model
 
         'tooti_comment_time' => 'datetime',
     ];
+
+    public function user(){
+        return $this->belongsTo(User::class);
+    }
+
+    public function tooti(){
+        return $this->belongsTo(Tooti::class);
+    }
 }
