@@ -19,4 +19,5 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
 
-Route::get('test',[Controller::class,'getProfile']);
+Route::get('test',[Controller::class,'getTest']);
+Route::get('inverseTest',[Controller::class,'getInverseTest']);

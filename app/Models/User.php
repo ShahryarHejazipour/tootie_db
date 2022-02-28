@@ -53,6 +53,7 @@ class User extends Authenticatable
         'longitude_Y',
         'password',
         'family_user',
+        'role_id',
     ];
 
     /**

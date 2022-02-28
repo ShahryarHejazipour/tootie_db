@@ -25,7 +25,7 @@ class HashtagMain extends Model
      */
     protected $casts = [
 
-        'hashtag_text' => 'datetime',
+
         'hashtag_first_creation_time' => 'datetime',
     ];
 

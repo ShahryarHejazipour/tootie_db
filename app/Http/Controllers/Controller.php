@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Like;
 use App\Models\User;
 
 use Illuminate\Foundation\Auth\Access\AuthorizesRequests;
@@ -13,19 +14,34 @@ class Controller extends BaseController
 {
     use AuthorizesRequests, DispatchesJobs, ValidatesRequests;
 
-    public function getProfile(){
+    public function getTest()
+    {
 
-        $user=User::find(1)->profile;
-
+        $user = User::find(1)->like;
 
 
         return response()->json([
 
-            'user'=>$user
+            'user' => $user
 
         ])->send();
 
 
+    }
+
+    public function getInverseTest()
+    {
+
+        $user = Like::find(1);
+        $username = $user->user;
+
+
+        return response()->json([
+
+            $username
+
+
+        ])->send();
 
     }
 }
