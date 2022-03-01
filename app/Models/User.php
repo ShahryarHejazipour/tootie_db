@@ -135,10 +135,15 @@ class User extends Authenticatable
         return $this->belongsToMany(Role::class);
     }
 
-    public function mention()
+
+    public function mentioner()
     {
-        return $this->hasMany(Mention::class);
+        return $this->hasMany(Mention::class , "mentioner_user_id");
     }
 
+    public function mentioned()
+    {
+        return $this->hasMany(Mention::class , "mentioned_user_id");
+    }
 
 }

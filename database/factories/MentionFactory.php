@@ -16,11 +16,11 @@ class MentionFactory extends Factory
         return [
 
             'mention_time'=>$this->faker->time,
-            'tooti_id'=>$this->faker->numberBetween(1,2),
-            'profile_id'=>$this->faker->numberBetween(1,2),
-            'comment_id'=>$this->faker->numberBetween(1,2),
-            'mentioned_user_id'=>$this->faker->numberBetween(1,2),
-            'mentioner_user_id'=>$this->faker->numberBetween(1,2),
+            'tooti_id'=>$this->faker->numberBetween(1,10),
+            'profile_id'=>$this->faker->numberBetween(1,10),
+            'comment_id'=>$this->faker->numberBetween(1,10),
+            'mentioned_user_id'=>$this->faker->numberBetween(1,10),
+            'mentioner_user_id'=>$this->faker->numberBetween(1,10),
         ];
     }
 }

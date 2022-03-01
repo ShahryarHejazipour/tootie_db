@@ -38,8 +38,21 @@ class Mention extends Model
         return $this->belongsTo(Tooti::class);
     }
 
-    public function user()
+    /*
+     * Connect to users Table this column
+     * with mentioner_user_id => id users Table
+     * */
+    public function userMentioner()
     {
-        return $this->belongsTo(User::class);
+        return $this->belongsTo(User::class , "mentioner_user_id");
+    }
+
+    /*
+     * Connect to users Table this column
+     * with mentioned_user_id => id users Table
+     * */
+    public function userMentioned()
+    {
+        return $this->belongsTo(User::class , "mentioned_user_id");
     }
 }

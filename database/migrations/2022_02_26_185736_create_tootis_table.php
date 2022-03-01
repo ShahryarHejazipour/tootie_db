@@ -17,6 +17,7 @@ class CreateTootisTable extends Migration
             $table->id();
             $table->text('tooti_text');
             $table->timestamp('tooti_time_creation');
+            $table->integer('user_id');
             $table->text('quote_text');
             $table->integer('device_id');
             $table->integer('re_tooti_id');

@@ -23,7 +23,6 @@ class CreateUsersTable extends Migration
             $table->string('latitude_X');
             $table->string('longitude_Y');
             $table->string('password');
-            $table->integer('role_id');
 
             //$table->rememberToken();
            // $table->timestamps();

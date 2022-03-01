@@ -21,7 +21,6 @@ class CreateMentionsTable extends Migration
             $table->integer('mentioned_user_id');
             $table->integer('mentioner_user_id');
             $table->timestamp('mention_time');
-           // $table->timestamps();
         });
     }
 

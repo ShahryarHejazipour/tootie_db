@@ -6,8 +6,13 @@ use App\Models\Bookmark;
 use App\Models\Comment;
 use App\Models\Device;
 use App\Models\Following;
+use App\Models\Image;
 use App\Models\Like;
+use App\Models\Mention;
 use App\Models\Notification;
+use App\Models\Profile;
+use App\Models\Role;
+use App\Models\Tooti;
 use App\Models\User;
 
 use App\Models\View;
@@ -23,13 +28,11 @@ class Controller extends BaseController
     public function getTest()
     {
 
-        $result = User::find(1)->tooti;
+        $result = User::find(1)->mentioned;
 
 
         return response()->json([
-
             'result' => $result
-
         ]);
 
 
@@ -38,7 +41,7 @@ class Controller extends BaseController
     public function getInverseTest()
     {
 
-        $result = View::find(5)->user;
+        $result = Mention::find(1)->userMentioned;
 
 
         return response()->json([

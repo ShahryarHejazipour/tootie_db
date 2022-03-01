@@ -18,6 +18,7 @@ class TootiFactory extends Factory
             'tooti_time_creation'=>now(),
             'quote_text'=>$this->faker->text,
             'device_id'=>$this->faker->numberBetween(1,2),
+            'user_id'=>$this->faker->numberBetween(1,2),
             're_tooti_id'=>$this->faker->numberBetween(1,2),
             'image_url_id'=>$this->faker->numberBetween(1,2),
             'view_id'=>$this->faker->numberBetween(1,2),
