@@ -29,5 +29,7 @@ class CreateHashtagMainsTable extends Migration
     public function down()
     {
         Schema::dropIfExists('hashtag_mains');
+
+
     }
 }
