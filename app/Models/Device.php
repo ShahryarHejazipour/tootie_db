@@ -11,9 +11,9 @@ class Device extends Model
 {
     use HasFactory;
 
-    protected $table='devices';
-    public $timestamps=false;
-    protected $fillable=[
+    protected $table = 'devices';
+    public $timestamps = false;
+    protected $fillable = [
         'device_name',
         'mac_address',
         'token',
@@ -36,11 +36,18 @@ class Device extends Model
         'first_register_time' => 'datetime',
     ];
 
-    public function user(){
+    public function user()
+    {
         return $this->belongsTo(User::class);
     }
 
-    public function tooti(){
+    public function tooti()
+    {
         return $this->belongsTo(Tooti::class);
+    }
+
+    public function notification()
+    {
+        return $this->hasMany(Notification::class);
     }
 }

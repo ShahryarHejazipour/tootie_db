@@ -34,5 +34,10 @@ class Image extends Model
         return $this->belongsTo(User::class);
     }
 
+    public function tootiImage()
+    {
+        return $this->belongsTo(TootiImage::class);
+    }
+
 
 }

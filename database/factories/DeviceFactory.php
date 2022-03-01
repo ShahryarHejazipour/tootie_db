@@ -22,7 +22,7 @@ class DeviceFactory extends Factory
             'ip'=>$this->faker->ipv4,
             'device_uu_id'=>$this->faker->uuid,
             'first_register_time'=>now(),
-            'user_id'=>$this->faker->numberBetween(1,2),
+            'user_id'=>$this->faker->numberBetween(1,10),
         ];
     }
 }

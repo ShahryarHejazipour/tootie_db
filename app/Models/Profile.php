@@ -34,4 +34,19 @@ class Profile extends Model
     public function user(){
         return $this->belongsTo(User::class);
     }
+
+    public function hashtag(){
+
+        return $this->belongsToMany(Hashtag::class);
+
+    }
+
+    public function mention(){
+        return $this->hasMany(Mention::class);
+    }
+
+
+
+
+
 }

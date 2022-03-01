@@ -15,10 +15,10 @@ class HashtagFactory extends Factory
     {
         return [
             'hashtag_creation_time'=>now(),
-            'tooti_id'=>$this->faker->numberBetween(1,2),
-            'profile_id'=>$this->faker->numberBetween(1,2),
-            'comment_id'=>$this->faker->numberBetween(1,2),
-            'hash_main_id'=>$this->faker->numberBetween(1,2),
+            'tooti_id'=>$this->faker->numberBetween(1,10),
+            'profile_id'=>$this->faker->numberBetween(1,10),
+            'comment_id'=>$this->faker->numberBetween(1,10),
+            'hash_main_id'=>$this->faker->numberBetween(1,10),
         ];
     }
 }

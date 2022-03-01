@@ -44,7 +44,7 @@ class Mention extends Model
      * */
     public function userMentioner()
     {
-        return $this->belongsTo(User::class , "mentioner_user_id");
+        return $this->belongsTo(User::class, "mentioner_user_id");
     }
 
     /*
@@ -53,6 +53,23 @@ class Mention extends Model
      * */
     public function userMentioned()
     {
-        return $this->belongsTo(User::class , "mentioned_user_id");
+        return $this->belongsTo(User::class, "mentioned_user_id");
     }
+
+    public function profile()
+    {
+        return $this->belongsTo(Profile::class);
+    }
+
+    public function notification()
+    {
+        return $this->hasOne(Notification::class);
+    }
+
+    public function comment()
+    {
+        return $this->belongsTo(Comment::class);
+    }
+
+
 }

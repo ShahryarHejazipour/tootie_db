@@ -41,4 +41,14 @@ class Hashtag extends Model
     {
         return $this->belongsTo(HashtagMain::class);
     }
+
+    public function profile()
+    {
+        return $this->belongsToMany(Profile::class);
+    }
+
+    public function comment()
+    {
+        return $this->belongsToMany(Comment::class);
+    }
 }

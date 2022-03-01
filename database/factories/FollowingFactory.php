@@ -15,8 +15,8 @@ class FollowingFactory extends Factory
     {
         return [
             'following_creation_time'=>$this->faker->time,
-            'user_id'=>$this->faker->numberBetween(1,2),
-            'following_user_id'=>$this->faker->numberBetween(1,2),
+            'user_id'=>$this->faker->numberBetween(1,10),
+            'following_user_id'=>$this->faker->numberBetween(1,10),
         ];
     }
 }

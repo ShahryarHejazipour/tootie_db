@@ -16,13 +16,13 @@ class NotificationFactory extends Factory
         return [
             'isSend'=>$this->faker->boolean,
             'notify_time_creation'=>$this->faker->time,
-            'like_id'=>$this->faker->numberBetween(1,2),
-            'comment_id'=>$this->faker->numberBetween(1,2),
-            're_tooti_id'=>$this->faker->numberBetween(1,2),
-            'following_id'=>$this->faker->numberBetween(1,2),
-            'user_id'=>$this->faker->numberBetween(1,2),
-            'device_id'=>$this->faker->numberBetween(1,2),
-            'mention_id'=>$this->faker->numberBetween(1,2),
+            'like_id'=>$this->faker->numberBetween(1,10),
+            'comment_id'=>$this->faker->numberBetween(1,10),
+            're_tooti_id'=>$this->faker->numberBetween(1,10),
+            'following_id'=>$this->faker->numberBetween(1,10),
+            'user_id'=>$this->faker->numberBetween(1,10),
+            'device_id'=>$this->faker->numberBetween(1,10),
+            'mention_id'=>$this->faker->numberBetween(1,10),
 
         ];
     }

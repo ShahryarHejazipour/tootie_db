@@ -20,7 +20,7 @@ class ProfileFactory extends Factory
             'biography'=>$this->faker->text(190),
             'birth_date'=>$this->faker->dateTime,
             'gender'=>$this->faker->randomElement(['male','female']),
-            'user_id'=>$this->faker->numberBetween(1,2),
+            'user_id'=>$this->faker->numberBetween(1,10),
         ];
     }
 }

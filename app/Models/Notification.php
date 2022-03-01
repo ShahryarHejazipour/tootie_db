@@ -54,4 +54,27 @@ class Notification extends Model
 
         return $this->belongsTo(Like::class);
     }
+
+    public function following()
+    {
+
+        return $this->belongsTo(Following::class);
+    }
+
+    public function comment()
+    {
+        return $this->belongsTo(Comment::class);
+    }
+
+    public function mention()
+    {
+        return $this->belongsTo(Mention::class);
+    }
+
+    public function device()
+    {
+        return $this->belongsTo(Device::class);
+    }
+
+
 }

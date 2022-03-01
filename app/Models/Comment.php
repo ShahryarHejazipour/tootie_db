@@ -10,9 +10,10 @@ use App\Models\Tooti;
 class Comment extends Model
 {
     use HasFactory;
-    protected $table='comments';
-    public $timestamps=false;
-    protected $fillable=[
+
+    protected $table = 'comments';
+    public $timestamps = false;
+    protected $fillable = [
         'tooti_comment_time',
         'comment_text',
         'user_id',
@@ -30,11 +31,28 @@ class Comment extends Model
         'tooti_comment_time' => 'datetime',
     ];
 
-    public function user(){
+    public function user()
+    {
         return $this->belongsTo(User::class);
     }
 
-    public function tooti(){
+    public function tooti()
+    {
         return $this->belongsTo(Tooti::class);
+    }
+
+    public function notification()
+    {
+        return $this->hasMany(Notification::class);
+    }
+
+    public function mention()
+    {
+        return $this->hasMany(Mention::class);
+    }
+
+    public function hashtag()
+    {
+        return $this->belongsToMany(Hashtag::class);
     }
 }

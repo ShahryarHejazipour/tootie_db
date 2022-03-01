@@ -17,8 +17,8 @@ class CommentFactory extends Factory
 
             'tooti_comment_time'=>now(),
             'comment_text'=>$this->faker->text,
-            'user_id'=>$this->faker->numberBetween(1,2),
-            'tooti_id'=>$this->faker->numberBetween(1,2),
+            'user_id'=>$this->faker->numberBetween(1,10),
+            'tooti_id'=>$this->faker->numberBetween(1,10),
         ];
     }
 }

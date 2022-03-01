@@ -17,11 +17,11 @@ class TootiFactory extends Factory
             'tooti_text'=>$this->faker->text,
             'tooti_time_creation'=>now(),
             'quote_text'=>$this->faker->text,
-            'device_id'=>$this->faker->numberBetween(1,2),
-            'user_id'=>$this->faker->numberBetween(1,2),
-            're_tooti_id'=>$this->faker->numberBetween(1,2),
-            'image_url_id'=>$this->faker->numberBetween(1,2),
-            'view_id'=>$this->faker->numberBetween(1,2),
+            'device_id'=>$this->faker->numberBetween(1,10),
+            'user_id'=>$this->faker->numberBetween(1,10),
+            're_tooti_id'=>$this->faker->numberBetween(1,10),
+            'image_url_id'=>$this->faker->numberBetween(1,10),
+            'view_id'=>$this->faker->numberBetween(1,10),
         ];
     }
 }
