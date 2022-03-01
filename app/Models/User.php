@@ -44,17 +44,6 @@ class User extends Authenticatable
      *
      * @var array<int, string>
      */
-    protected $hidden = [
-        'username',
-        'name_user',
-        'email',
-        'register_first_time',
-        'latitude_X',
-        'longitude_Y',
-        'password',
-        'family_user',
-        'role_id',
-    ];
 
     /**
      * The attributes that should be cast.
@@ -126,7 +115,7 @@ class User extends Authenticatable
     //
     public function tooti()
     {
-        return $this->hasOne(Tooti::class);
+        return $this->hasMany(Tooti::class);
     }
 
     //
