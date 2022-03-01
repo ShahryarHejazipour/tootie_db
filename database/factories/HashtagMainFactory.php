@@ -14,7 +14,7 @@ class HashtagMainFactory extends Factory
     public function definition()
     {
         return [
-            'hashtag_text'=>$this->faker->text,
+            'hashtag_text'=>$this->faker->text(190),
             'hashtag_first_creation_time'=>$this->faker->time,
         ];
     }

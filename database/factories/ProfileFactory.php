@@ -17,7 +17,7 @@ class ProfileFactory extends Factory
 
             'image_profile_url'=>$this->faker->imageUrl,
             'image_cover_url'=>$this->faker->imageUrl,
-            'biography'=>$this->faker->text,
+            'biography'=>$this->faker->text(190),
             'birth_date'=>$this->faker->dateTime,
             'gender'=>$this->faker->randomElement(['male','female']),
             'user_id'=>$this->faker->numberBetween(1,2),

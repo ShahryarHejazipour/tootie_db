@@ -14,7 +14,7 @@ class HashtagFactory extends Factory
     public function definition()
     {
         return [
-            'hashtag_creation_time'=>$this->faker->time,
+            'hashtag_creation_time'=>now(),
             'tooti_id'=>$this->faker->numberBetween(1,2),
             'profile_id'=>$this->faker->numberBetween(1,2),
             'comment_id'=>$this->faker->numberBetween(1,2),
