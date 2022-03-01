@@ -15,7 +15,7 @@ class CreateHashtagMainsTable extends Migration
     {
         Schema::create('hashtag_mains', function (Blueprint $table) {
             $table->id();
-            $table->string('hashtag_text');
+            $table->text('hashtag_text');
             $table->timestamp('hashtag_first_creation_time');
            // $table->timestamps();
         });

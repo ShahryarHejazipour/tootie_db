@@ -44,7 +44,7 @@ class User extends Authenticatable
      *
      * @var array<int, string>
      */
-   /* protected $hidden = [
+    protected $hidden = [
         'username',
         'name_user',
         'email',
@@ -54,7 +54,7 @@ class User extends Authenticatable
         'password',
         'family_user',
         'role_id',
-    ];*/
+    ];
 
     /**
      * The attributes that should be cast.

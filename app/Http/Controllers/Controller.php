@@ -24,7 +24,7 @@ class Controller extends BaseController
 
             'user' => $user
 
-        ])->send();
+        ]);
 
 
     }
@@ -32,16 +32,19 @@ class Controller extends BaseController
     public function getInverseTest()
     {
 
-        $user = Like::find(1);
-        $username = $user->user;
+        $like = Like::find(1);
+        $user_id = $like->user_id;
+        // $user=User::find($user_id);
+        $notification = $like->notification;
+        // $tooti = $like->tooti;
+        // $user = $like->user;
 
 
         return response()->json([
 
-            $username
+            'user' => $notification
 
-
-        ])->send();
+        ]);
 
     }
 }

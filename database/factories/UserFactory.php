@@ -23,7 +23,7 @@ class UserFactory extends Factory
             'password' => $this->faker->password, // password
             'latitude_X'=>$this->faker->latitude,
             'longitude_Y'=>$this->faker->longitude,
-            'role_id'=>$this->faker->numberBetween(1,2),
+            'role_id'=>$this->faker->numberBetween(1,10),
             //'remember_token' => Str::random(10),
         ];
     }
