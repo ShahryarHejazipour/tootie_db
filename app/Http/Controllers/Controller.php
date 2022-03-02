@@ -32,7 +32,7 @@ class Controller extends BaseController
     public function getTest()
     {
 
-        $result = View::find(4)->tooti;
+        $result = User::find(8)->tootiImage;
 
 
         return response()->json([

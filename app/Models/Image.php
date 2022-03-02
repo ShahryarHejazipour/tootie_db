@@ -29,14 +29,13 @@ class Image extends Model
         'image|_url_creation_time' => 'datetime',
     ];
 
-    public function user()
-    {
+    public function user() {
         return $this->belongsTo(User::class);
     }
 
     public function tootiImage()
     {
-        return $this->belongsTo(TootiImage::class);
+        return $this->hasOne(TootiImage::class , 'image_id');
     }
 
 
