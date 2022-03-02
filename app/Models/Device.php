@@ -23,6 +23,7 @@ class Device extends Model
         'device_uu_id',
         'first_register_time',
         'user_id',
+        'tooti_id',
     ];
 
     /**

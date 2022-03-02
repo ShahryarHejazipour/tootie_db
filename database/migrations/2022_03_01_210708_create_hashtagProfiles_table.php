@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateProfileHashtagsTable extends Migration
+class CreateHashtagProfilesTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,7 +13,7 @@ class CreateProfileHashtagsTable extends Migration
      */
     public function up()
     {
-        Schema::create('profile_hashtag', function (Blueprint $table) {
+        Schema::create('hashtag_profile', function (Blueprint $table) {
             $table->id();
             $table->integer('profile_id');
             $table->integer('hashtag_id');
@@ -28,6 +28,6 @@ class CreateProfileHashtagsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('profile_hashtag');
+        Schema::dropIfExists('hashtag_profile');
     }
 }

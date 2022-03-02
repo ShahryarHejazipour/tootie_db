@@ -23,6 +23,7 @@ class NotificationFactory extends Factory
             'user_id'=>$this->faker->numberBetween(1,10),
             'device_id'=>$this->faker->numberBetween(1,10),
             'mention_id'=>$this->faker->numberBetween(1,10),
+            'tooti_id'=>$this->faker->numberBetween(1,10),
 
         ];
     }

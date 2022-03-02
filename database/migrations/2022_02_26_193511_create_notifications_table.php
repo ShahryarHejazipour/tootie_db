@@ -23,6 +23,7 @@ class CreateNotificationsTable extends Migration
             $table->integer('user_id');
             $table->integer('device_id');
             $table->integer('mention_id');
+            $table->integer('tooti_id');
             $table->timestamp('notify_time_creation');
             //$table->timestamps();
         });

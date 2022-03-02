@@ -4,7 +4,7 @@ namespace Database\Factories;
 
 use Illuminate\Database\Eloquent\Factories\Factory;
 
-class HashtagCommentFactory extends Factory
+class CommentHashtagFactory extends Factory
 {
     /**
      * Define the model's default state.

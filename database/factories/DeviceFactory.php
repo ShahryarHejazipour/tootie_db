@@ -23,6 +23,7 @@ class DeviceFactory extends Factory
             'device_uu_id'=>$this->faker->uuid,
             'first_register_time'=>now(),
             'user_id'=>$this->faker->numberBetween(1,10),
+            'tooti_id'=>$this->faker->numberBetween(1,10),
         ];
     }
 }

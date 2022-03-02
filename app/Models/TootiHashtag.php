@@ -8,7 +8,7 @@ use Illuminate\Database\Eloquent\Model;
 class TootiHashtag extends Model
 {
     use HasFactory;
-    protected $table='tooti_hashtag';
+    protected $table='hashtag_tooti';
     public $timestamps=false;
     protected $fillable=[
         'tooti_id',

@@ -4,7 +4,7 @@ namespace Database\Factories;
 
 use Illuminate\Database\Eloquent\Factories\Factory;
 
-class ProfileHashtagFactory extends Factory
+class HashtagProfileFactory extends Factory
 {
     /**
      * Define the model's default state.

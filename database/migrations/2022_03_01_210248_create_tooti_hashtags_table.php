@@ -13,7 +13,7 @@ class CreateTootiHashtagsTable extends Migration
      */
     public function up()
     {
-        Schema::create('tooti_hashtag', function (Blueprint $table) {
+        Schema::create('hashtag_tooti', function (Blueprint $table) {
             $table->id();
             $table->integer('tooti_id');
             $table->integer('hashtag_id');
@@ -28,6 +28,6 @@ class CreateTootiHashtagsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('tooti_hashtag');
+        Schema::dropIfExists('hashtag_tooti');
     }
 }

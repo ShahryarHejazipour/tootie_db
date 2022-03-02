@@ -23,6 +23,6 @@ class TootiImage extends Model
     }
 
     public function image(){
-        return $this->hasMany(Bookmark::class);
+        return $this->hasMany(Image::class);
     }
 }

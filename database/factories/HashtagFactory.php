@@ -18,7 +18,7 @@ class HashtagFactory extends Factory
             'tooti_id'=>$this->faker->numberBetween(1,10),
             'profile_id'=>$this->faker->numberBetween(1,10),
             'comment_id'=>$this->faker->numberBetween(1,10),
-            'hash_main_id'=>$this->faker->numberBetween(1,10),
+            'hashtag_main_id'=>$this->faker->numberBetween(1,10),
         ];
     }
 }

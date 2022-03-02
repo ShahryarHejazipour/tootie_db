@@ -17,7 +17,7 @@ class Hashtag extends Model
         'tooti_id',
         'profile_id',
         'comment_id',
-        'hash_main_id',
+        'hashtag_main_id',
     ];
 
 

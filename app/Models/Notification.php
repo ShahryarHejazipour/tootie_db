@@ -24,6 +24,7 @@ class Notification extends Model
         'user_id',
         'device_id',
         'mention_id',
+        'tooti_id',
 
     ];
 

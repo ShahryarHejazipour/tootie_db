@@ -5,7 +5,10 @@ namespace App\Http\Controllers;
 use App\Models\Bookmark;
 use App\Models\Comment;
 use App\Models\Device;
+use App\Models\Follower;
 use App\Models\Following;
+use App\Models\Hashtag;
+use App\Models\HashtagMain;
 use App\Models\Image;
 use App\Models\Like;
 use App\Models\Mention;
@@ -13,6 +16,7 @@ use App\Models\Notification;
 use App\Models\Profile;
 use App\Models\Role;
 use App\Models\Tooti;
+use App\Models\TootiImage;
 use App\Models\User;
 
 use App\Models\View;
@@ -28,7 +32,7 @@ class Controller extends BaseController
     public function getTest()
     {
 
-        $result = User::find(1)->mentioned;
+        $result = View::find(4)->tooti;
 
 
         return response()->json([
@@ -41,7 +45,7 @@ class Controller extends BaseController
     public function getInverseTest()
     {
 
-        $result = Mention::find(1)->userMentioned;
+        $result =Tooti::find(4)->view;
 
 
         return response()->json([
